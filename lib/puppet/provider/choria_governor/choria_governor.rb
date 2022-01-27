@@ -19,6 +19,7 @@ class Puppet::Provider::ChoriaGovernor::ChoriaGovernor < Puppet::ResourceApi::Si
 
   def run(action, ens, args={})
     args.delete(:ensure)
+    args.merge!(user: 1000)
     parse_result(Puppet::Util::Execution.execute(make_cmd(action, args), :failonfail => true, :custom_environment => environment), ens)
   end
 

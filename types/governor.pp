@@ -4,5 +4,6 @@ type Choria::Governor = Struct[{
   "replicas"   => Integer[1,5],
   "collective" => String,
   "force"      => Optional[Boolean],
-  "ensure"     => Optional[Enum["present", "absent"]]
+  "ensure"     => Optional[Enum["present", "absent"]],
+  "user"       => Optional[String]
 }]

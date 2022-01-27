@@ -49,6 +49,11 @@ Puppet::ResourceApi.register_type(
       type: "Enum[present, absent]",
       desc: "Create or remove the Governor",
       default: "present"
+    },
+
+    user: {
+      type: "String",
+      desc: "The user which the Governor operates on",
     }
   }
 )
